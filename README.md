@@ -58,3 +58,6 @@ I disabled th edefault website that comes installed with Apache. This is require
 
 ![Capture7](https://user-images.githubusercontent.com/92868845/138157960-676f76b8-380e-4e88-8fda-083fdc29476c.PNG)
 
+To ensure my configuration file doesnt contain syntax errors, I entered the command; sudo apache2ctl configtest
+
+![Capture](https://user-images.githubusercontent.com/92868845/138175937-f9ef6704-7c00-4670-8e99-c5887e9609fe.PNG)
