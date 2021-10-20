@@ -47,7 +47,8 @@ The saved and closed the file, using the steps below;
 1. Hit esc on the keyboard
 2. Type  :
 3. Type wq
-4. Hit Enter
+4. 
+5. Hit Enter
 
 I used the ls to show the file in the sites-available directroy by using sudo ls /etc/apache2/sites-available. SEE SS
 
@@ -61,3 +62,22 @@ I disabled th edefault website that comes installed with Apache. This is require
 To ensure my configuration file doesnt contain syntax errors, I entered the command; sudo apache2ctl configtest
 
 ![Capture](https://user-images.githubusercontent.com/92868845/138175937-f9ef6704-7c00-4670-8e99-c5887e9609fe.PNG)
+
+Created an index.html file in that location so that i can test that the virtual host works as expected by using; sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+
+# Enable PHP On The Website
+I need to wdit /etc/apache2/mods-enable/dir.conf file and change the order in which the index.php file is listed within the DirectoryIndex directive:
+Entered the command below
+sudo vim /etc/apache2/mods-enabled/dir.conf
+<IfModule mod_dir.c>
+#Change this:
+    #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+    #To this:
+    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+Saved and closed the file using vim editor
+Reloaded apache2, so change can take effect using sudo systemctl reload apache2
+Created a PHP test script file known as ‘index.php’ to confirm that Apache is able to handle and process requests for PHP files
+Saved and closed file and refreshed my EC2 public ip address url page
+PHP default page screenshot 
+![Capture9](https://user-images.githubusercontent.com/92868845/138180522-892bd670-1d13-4975-a282-dea6e58e665d.PNG)
