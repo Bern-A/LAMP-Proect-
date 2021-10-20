@@ -1,4 +1,4 @@
-# LAMP-Proect-
+# LAMP-Project
 Created my AWS account and did the following;
 
 1. Signed into my AWS and created a new EC2 instance with Ubuntu Server. Saved the private key. Connected to my instance using CMD.
@@ -53,5 +53,8 @@ I used the ls to show the file in the sites-available directroy by using sudo ls
 
 ![Capture6](https://user-images.githubusercontent.com/92868845/138155367-9875f9fe-be93-47f0-a90b-e0a0a0aa2a5d.PNG)
 
+Enable a new virtual host by entering command sudo a2ensite projectlamp
+I disabled th edefault website that comes installed with Apache. This is required if you're not using a costom domain name, because Apache's default configuration would overwrite your virtual host. To disable Apache's default website use a2dissite command, sudo a2dissite 000-default. SEE SS
 
+![Capture7](https://user-images.githubusercontent.com/92868845/138157960-676f76b8-380e-4e88-8fda-083fdc29476c.PNG)
 
