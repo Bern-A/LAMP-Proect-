@@ -6,4 +6,5 @@ Created my AWS account and did the following;
 ![Capture1](https://user-images.githubusercontent.com/92868845/138126652-684416ee-495b-46da-9f02-8e365319a3f0.PNG)
 Opened TCP port 80 which is the default port that web browsers use to access web pages see screen shot
 ![Capture2](https://user-images.githubusercontent.com/92868845/138127938-29d5cc13-ff5f-4519-9eca-7c8c9b4a07ab.PNG)
-
+Verified my web server is now correctly installed and accessible through my firewall. Open my EC2 public IP Address on my browser. See Screen Shot 
+![Capture3](https://user-images.githubusercontent.com/92868845/138140963-dcc2ce58-40fa-45ec-8605-a5cc54c76cf1.PNG)
