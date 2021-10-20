@@ -15,3 +15,8 @@ Ran a security script that comes pre-installed with MYSQL sudo mysql_secure_inst
 Validated my password. Tested my if i was able to log into  mysql console by typing sudo mysql. SEE SCREEN SHT
 ![Capture4](https://user-images.githubusercontent.com/92868845/138145829-a7559737-68d4-4e47-a976-5976149898e3.PNG)
 Exit MYSQL console by typing mysql> exit
+
+# Installing PHP
+PHP is the component of our set up that will process code to disp;ay dynamic contect to end user. In addition to php package, php-mysql, php module that allos php to communicate with MYSQL-based databses is needed. libapache2-mod-php is needed to enable apache to handle php files. Core packages will automatically be installed as dependecies.
+I installed  pakages at onces by running; sudo apt install php libapache2-mod-php php-mysql and ran php -v to confirm version. SEE SS
+![Capture5](https://user-images.githubusercontent.com/92868845/138149696-7bc51501-f45c-4a0b-bdbd-37762e1ffa4b.PNG)
